@@ -302,6 +302,10 @@
 			<p>Target: Generate 10 basic multiplication problems using JavaScript and check the answers</p>
 		</div>
 
+		<script>
+			$('#quiz').hide();
+		</script>
+
 		<div class="practice">
 			<h1>Change Attribute -- Rolling a dice </h1>
 			<p> <input type="button" id="roll" value="roll" /> </p>
@@ -347,6 +351,27 @@
 							<div class="img-container-hide">
 								<img src="img/usca5.jpg" alt="usca">
             </div>
+
+								<script>
+									// get the element
+                var imglist = document.querySelectorAll('.img-container-hide');
+                imglist[0].setAttribute('class','img-container');
+
+                // index which points to current index
+                var index = 0;
+
+                // call the function every 5 second
+                setInterval(runnow, 5000);
+
+                // automatically change to another image
+                function runnow() {
+                  imgList[index].setAttribute('class', 'img container hide');
+                  index++;  // 0, 1, 2, 3
+                  index = index % imgList.length;
+                  imgList[index].setAttribute('class', 'img container');
+                }
+
+								</script>
 
 							</div>
 
