@@ -303,7 +303,16 @@
 		</div>
 
 		<script>
-			$('#quiz').hide();
+
+      function gen() {
+        var num = Math.floor(Math.random()*10)+1;
+        return num;
+      }
+
+			$('#quiz spam').each(function() {
+        var num1 = gen();
+        $(this).text(num1);
+      }
 		</script>
 
 		<div class="practice">
